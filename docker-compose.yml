@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  wiremock:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 57570:8181
+  webservice:
+    build:
+      dockerfile: Dockerfile
+      context: /home/ok23/Downloads/gs-spring-boot-docker-master/complete
+    ports:
+      - 7272:18080
